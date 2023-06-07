@@ -5,7 +5,7 @@ const PORT = 8000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// app.use("/", require("./routes/index.js"));
+app.use("/", require("./routes/index.js"));
 
 app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`);
