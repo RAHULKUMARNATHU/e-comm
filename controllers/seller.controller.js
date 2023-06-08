@@ -1,7 +1,7 @@
 const Seller = require("../models/seller.model");
 const jwt = require("jsonwebtoken");
 const secretKey = "Secret";
-const securePassword = require("./middleware/bcrypt");
+const securePassword = require("../middleware/bcrypt");
 
 //1. Seller SignUp
 const signUp = async (req, res) => {

@@ -1,5 +1,5 @@
 const bcrypt = require("bcryptjs");
-const Seller = require("../../models/seller.model");
+const Seller = require("../models/seller.model");
 
 //1. Generate Hashed Password
 async function hashPassword(passKey) {
