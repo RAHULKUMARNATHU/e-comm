@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 //connection to DB
-mongoose.connect("mongodb://localhost/ecomm");
+mongoose.connect("mongodb://localhost/ecommerce");
 const db = mongoose.connection;
 
 db.on("error", console.error.bind(console, "Error connecting to db"));

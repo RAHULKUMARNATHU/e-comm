@@ -12,9 +12,10 @@ const signUp = async (req, res) => {
   }
 };
 
-//2. Login
+// //2. Login
 const signIn = async (req, res) => {
   try {
+   
     const user = req.body;
     jwt.sign({ user }, secretKey, { expiresIn: "1d" }, (error, token) => {
       if (error) {
@@ -27,12 +28,11 @@ const signIn = async (req, res) => {
   }
 };
 
-const findUser = async (req, res) => {
-  const isUser = await Seller.findOne({ email: req.body.email });
-  return res.send(isUser);
-};
+// const signIn = async (req, res) => {
+//   const isUser = await Seller.findOne({ email: req.body.email });
+//   return res.send(isUser);
+// };
 module.exports = {
   signUp,
   signIn,
-  findUser,
 };
