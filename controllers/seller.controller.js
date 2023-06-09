@@ -15,7 +15,7 @@ const signUp = async (req, res) => {
         confirm_password: hashedPassword,
       };
       let seller = await Seller.create(data);
-      res.status(200).send(seller);
+      res.status(201).send(seller);
     } catch (err) {
       res.status(500).send(err.message);
     }
